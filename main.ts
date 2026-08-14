@@ -183,9 +183,9 @@
 // 	})
 // }
 
-type GithubUser = {
-	avatar_url: string
-}
+// type GithubUser = {
+// 	avatar_url: string;
+// };
 
 // async function showAvatar(username: string): Promise<GithubUser> {
 // 	const response = await fetch(`file://api.github/users/${username}`)
@@ -205,4 +205,60 @@ type GithubUser = {
 
 // showAvatar(`SolarRadiannt`)
 
-function loadJson(url)
+// async function loadJson(url: string) {
+// 	const response = await fetch(url);
+
+// 	if (response.status == 200) {
+// 		const json = response.json();
+// 		return json;
+// 	}
+// 	throw new Error(String(response.status));
+// }
+
+// loadJson(`https://javascript.info/no-such-user.json`).catch(alert);
+
+// type NumRange = {
+// 	from: number;
+// 	to: number;
+// 	[Symbol.iterator]: () => NumRange;
+// };
+// const range = {
+// 	from: 1,
+// 	to: 5,
+// 	// [Symbol.iterator]() {
+// 	// 	return {
+// 	// 		current: this.from,
+// 	// 		last: this.to,
+
+// 	// 		next() {
+// 	// 			if (this.current <= this.last) {
+// 	// 				return { done: false, value: this.current++ };
+// 	// 			} else {
+// 	// 				return { done: true };
+// 	// 			}
+// 	// 		},
+// 	// 	};
+// 	// },
+
+// 	*[Symbol.iterator]() {
+// 		for (let value = this.from; value <= this.to; value++) {
+// 			yield value;
+// 		}
+// 	},
+// };
+
+// alert([...range]);
+
+// function* pseudoRandom(seed: number) {
+// 	let value = seed;
+
+// 	while (true) {
+// 		value = (value * 16807) % 2147483647;
+// 		yield value;
+// 	}
+// }
+
+// const rng = pseudoRandom(1);
+// alert(rng.next().value);
+// alert(rng.next().value);
+// alert(rng.next().value);
