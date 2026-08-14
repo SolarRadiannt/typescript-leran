@@ -152,15 +152,57 @@
 
 // const jack = new User(`Jack`)
 
-function loadScript(src: string, callback: (script: HTMLScriptElement)=>void): void {
-	const script = document.createElement(`script`)
-	script.src = src
+// function loadScript(src: string, callback: (error: Error | null, script: HTMLScriptElement)=>void): void {
+// 	const script = document.createElement(`script`)
+// 	script.src = src
 
-	script.onload = () => callback(script)
+// 	script.onload = () => callback(null, script)
+// 	script.onerror = () => callback(new Error(`Script load error for ${src}`), script)
 
-	document.head.append(script)
+// 	document.head.append(script)
+// }
+
+// loadScript('https://cdnjs.cloudflare.com/ajax/libs/lodash.js/3.2.0/lodash.js', (error, script) => {
+// 	if (error) {
+// 		alert(`found error: ${error}`)
+// 		return
+// 	}
+// 	alert(`Cool, the script ${script.src} is loaded`)
+// })
+
+// const myPromise = new Promise<string>((resolve, reject) => {
+// 	setTimeout(() => resolve("done"), 1000)
+// }).then(
+// 	result => alert(result),
+// 	error => alert(error)
+// )
+
+// function delay<T>(ms: number, value: T): Promise<T> {
+// 	return new Promise((resolve, reject) => {
+// 		setTimeout(()=>resolve(value), ms)
+// 	})
+// }
+
+type GithubUser = {
+	avatar_url: string
 }
 
-loadScript('https://cdnjs.cloudflare.com/ajax/libs/lodash.js/3.2.0/lodash.js', (script) => {
-	alert(`Cool, the script ${script.src} is loaded`)
-})
+// async function showAvatar(username: string): Promise<GithubUser> {
+// 	const response = await fetch(`file://api.github/users/${username}`)
+// 	const user: GithubUser = await response.json()
+
+// 	const image = document.createElement(`img`)
+// 	image.src = user.avatar_url
+// 	image.className = `promise-avatar-example`
+// 	document.body.append(image)
+
+// 	await new Promise(resolve => setTimeout(resolve, 3000));
+
+// 	image.remove()
+
+// 	return user
+// }
+
+// showAvatar(`SolarRadiannt`)
+
+function loadJson(url)
