@@ -1,8 +1,9 @@
 {
-  "compilerOptions": {
-    "outDir": "./dist",
-    "target": "es2022",
-    "lib": ["es2022", "dom"],
-    // "moduleResolution": "node"
-  }
+	"compilerOptions": {
+		"outDir": "./dist",
+		"rootDir": "./src",
+		"target": "es2022",
+		"lib": ["es2022", "dom"],
+		// "moduleResolution": "node"
+	},
 }

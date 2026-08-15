@@ -262,3 +262,9 @@
 // alert(rng.next().value);
 // alert(rng.next().value);
 // alert(rng.next().value);
+
+import { sayHi } from "./sayHi";
+
+alert(sayHi);
+sayHi(`John`);
+alert(`hey say something`);

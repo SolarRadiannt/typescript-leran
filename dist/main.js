@@ -1,4 +1,3 @@
-"use strict";
 // alert(`age check required!`)
 // let result = prompt(`How old are you?`, `18`);
 // alert(`You are ${result} years old`)
@@ -212,3 +211,7 @@
 // alert(rng.next().value);
 // alert(rng.next().value);
 // alert(rng.next().value);
+import { sayHi } from "./sayHi";
+alert(sayHi);
+sayHi(`John`);
+alert(`hey say something`);
